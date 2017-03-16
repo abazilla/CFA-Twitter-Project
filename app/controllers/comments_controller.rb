@@ -25,7 +25,9 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(comment_params)
+    #gets the current user's id and applies it to the comment
     @comment.doggo_id = current_doggo.id
+    #gets the current post id using the params given and sets the comment post to the current post in show htm
     @bark = Bark.find(params[:id])
     @comment.bark_id = @bark.id
 

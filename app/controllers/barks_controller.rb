@@ -13,12 +13,14 @@ class BarksController < ApplicationController
     @follow_status = current_doggo.follows?(@bark.doggo) ? 'Unfollow' : 'Follow'
     @like_status = current_doggo.likes?(@bark) ? 'Unlike' : 'Like'
     @comment = Comment.new
+
+    #creates the variable for use in show.html
+    @all_comments = @bark.comments
   end
 
   # GET /barks/new
   def new
     @bark = Bark.new
-    @comment = Comment.new(bark_id: params[:bark_id])
   end
 
   # GET /barks/1/edit

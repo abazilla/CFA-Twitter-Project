@@ -17,6 +17,8 @@
 
 <%= render 'comments/form', comment: @comment %>
 
-<%#= .each do |comments| %>
-<%#= puts comments %>
-<%#= end %>
+#shows all email and comments of user
+<% @all_comments.each do |comment| %>
+  <p><%= comment.doggo.email %></p>
+  <p><%= comment.description %></p>
+<% end %>

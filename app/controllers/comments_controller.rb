@@ -31,9 +31,10 @@ class CommentsController < ApplicationController
     @bark = Bark.find(params[:id])
     @comment.bark_id = @bark.id
 
+    #change @comment to @bark here so it goes back to the posts page instead
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to @bark, notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }

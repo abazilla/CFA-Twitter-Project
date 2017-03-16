@@ -1,0 +1,23 @@
+<%= form_for(bark) do |f| %>
+  <% if bark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bark.errors.count, "error") %> prohibited this bark from being saved:</h2>
+
+      <ul>
+      <% bark.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

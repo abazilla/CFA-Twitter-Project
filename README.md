@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-# README
+# Twitter Clone 16/03/2017
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# CFA-Twitter-Project
->>>>>>> b34bad7f386c85c62676e491e8a177f80d055e75
+Attempt to create a twitter clone using Rails. It includes the key gem socialization to allow for a few features to replicate Twitter, such as following and liking.

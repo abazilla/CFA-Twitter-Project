@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       get 'toggle_follow', to: 'barks#toggle_follow'
     end
   end
+  
   devise_for :doggos
   root 'pages#index'
 

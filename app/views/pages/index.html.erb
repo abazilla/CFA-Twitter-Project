@@ -1,9 +1,9 @@
 <div class="container">
     <div class="row">
-        <% @barks.each do |bark| %>
+        <% @barks.reverse_each do |bark| %>
             <%#= link_to(bark) do %>
                 <div class="col s6 offset-s3 left-align card-panel hoverable">
-                    <h6><%= link_to bark.doggo.email, '#' %></h6>
+                    <h6><%= link_to bark.doggo.email, '#' %> <span class="thin"><%=bark.doggo.created_at%></span></h6>
                     <p><%= bark.description %></p>
                     <p><%= link_to 'Show', bark %></p>
                 </div>
